@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Infer Here</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .question1 {
+            white-space: pre; /* Change to 'pre' to preserve line breaks and spaces */
+        }
+        .restart-btn {
+            position: absolute;
+            top: 45px;
+            right: 400px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Restart Button -->
+        <a class="restart-btn" href="/">Restart</a>
+
+        <h1>Infer Here</h1>
+        <h2>Upload Your PDF File to Infer Here</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+            {% if message %}
+                <p>{{ message }}</p>
+            {% endif %}
+        </form>
+
+        <h2>Write your question:</h2>
+        <form action="/infer" method="post">
+            <textarea name="question" rows="5" cols="50"></textarea><br><br>
+            <input type="submit" value="Submit">
+            {% if question1 %}
+                <!-- Add the 'question1' class to the paragraph -->
+                <p class="question1">{{ question1 }}</p>
+            {% endif %}
+        </form>
+
+        {% if question %}
+            <h2>Question:</h2>
+            <p>{{ question }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
