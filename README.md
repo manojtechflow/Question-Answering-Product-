@@ -1,5 +1,10 @@
 # AI-Powered Insurance Document Inference and Knowledge Retrieval System
 
+## Background 
+
+In my previous role, I spearheaded the development and successful launch of a Q&A product within the company's enterprise offerings. This product is an Demo Product, an end-to-end inference solution, seamlessly integrated Elasticsearch with BM25 Retriever to enhance context ranking capabilities. By optimizing Language Models such as BERT and RoBERTa through fine-tuning on a tailored insurance dataset in Squad 2.0 format, we achieved exceptional accuracy rates of 93% on 16 paragraph context fields and 95% on 8 key pair entity fields prediction. This experience underscores my proficiency in leveraging advanced technologies to deliver impactful solutions.
+
+
 ## Overview
 
 This is an end-to-end Question & Answering (Q&A) Module. The module is an integral part of Natural Language Processing (NLP) systems, enabling computers to understand and respond to questions in human language. It involves various steps such as tokenization, model selection, contextual understanding, answer prediction, and response formatting.
